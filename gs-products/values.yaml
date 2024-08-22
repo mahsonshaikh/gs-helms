@@ -4,6 +4,9 @@
 
 replicaCount: 1
 
+application:
+  namespace: gs-app
+
 image:
   repository: ahsonshaikh/gs-products
   pullPolicy: IfNotPresent
