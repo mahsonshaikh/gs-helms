@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: {{ .Values.application.namespace }}
   name: {{ include "gs-users.fullname" . }}
   labels:
     {{- include "gs-users.labels" . | nindent 4 }}
