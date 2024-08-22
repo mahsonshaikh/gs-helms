@@ -5,7 +5,7 @@
 replicaCount: 10
 
 application:
-  namespace: gs-users
+  namespace: gs-app
 
 image:
   repository: ahsonshaikh/gs-users
