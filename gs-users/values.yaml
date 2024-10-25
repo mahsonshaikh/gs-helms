@@ -47,7 +47,7 @@ securityContext:
 
 service:
   type: ClusterIP
-  port: 80
+  port: 3001
 
 ingress:
   enabled: false
@@ -82,11 +82,11 @@ resources:
 livenessProbe:
   httpGet:
     path: /
-    port: http
+    port: 3000
 readinessProbe:
   httpGet:
     path: /
-    port: http
+    port: 3000
 
 autoscaling:
   enabled: false
