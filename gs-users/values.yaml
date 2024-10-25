@@ -8,12 +8,13 @@ application:
   namespace: gs-app
 
 image:
-  repository: ahsonshaikh/gs-users
+  repository: globalserveacrprod.azurecr.io/gs-users
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "1.0"
 
-imagePullSecrets: []
+imagePullSecrets:
+  - name: globalserve-acr-secret
 nameOverride: ""
 fullnameOverride: ""
 
@@ -45,7 +46,7 @@ securityContext:
   # runAsUser: 1000
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 80
 
 ingress:
