@@ -5,7 +5,7 @@
 replicaCount: 10
 
 application:
-  namespace: gs-app
+  namespace: globalserve-application
 
 image:
   repository: globalserveacrprod.azurecr.io/gs-users
